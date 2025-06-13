@@ -35,9 +35,13 @@ const onlineUsers = new Map();
 
 const io = new Server(server, {
     cors: {
-        origin: "https://tutors-finders-server.onrender.com", 
-    }
+    origin: "https://tutor-finder-client.vercel.app",
+    methods: ["GET", "POST"],
+    credentials: true
+}
+
 });
+
 
 io.on('connection', (socket) => {
     console.log(`[Socket.IO] A user connected with socket ID: ${socket.id}`);
