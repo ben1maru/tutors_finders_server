@@ -35,7 +35,7 @@ const onlineUsers = new Map();
 
 const io = new Server(server, {
     cors: {
-        origin: "*", // або вкажіть конкретне джерело: "http://localhost:3000"
+        origin: "https://tutors-finders-server.onrender.com", 
     }
 });
 
